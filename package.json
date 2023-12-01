@@ -4,10 +4,10 @@
   "description": "A coding challenge",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "build:analyze": "ANALYZE=true npm run build"
+    "dev": "env-cmd next dev",
+    "build": "env-cmd next build",
+    "start": "env-cmd next start",
+    "build:analyze": "ANALYZE=true env-cmd npm run build"
   },
   "keywords": [
     "next",
@@ -32,16 +32,17 @@
   },
   "devDependencies": {
     "@types/node": "^14.14.9",
-    "@types/react": "^17.0.0",
+    "@types/react": "17.0.39",
     "@types/react-dom": "^17.0.0",
     "@types/react-redux": "^7.1.11",
     "@typescript-eslint/eslint-plugin": "^4.8.1",
     "@typescript-eslint/parser": "^4.8.1",
+    "env-cmd": "^10.1.0",
     "eslint": "^7.14.0",
     "eslint-config-prettier": "^6.15.0",
     "eslint-config-react-app": "^6.0.0",
     "eslint-plugin-prettier": "^3.1.4",
     "prettier": "^2.2.0",
-    "typescript": "^4.1.2"
+    "typescript": "~4.1.2"
   }
 }
